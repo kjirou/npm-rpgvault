@@ -19,13 +19,15 @@
     "grunt-testem": "*",
     "grunt-text-replace": "*",
     "mocha": "*",
+    "underscore": "*",
     "expect.js": "*",
     "sinon": "*",
     "testem": "*"
   },
+  "main": "lib/rpgvault.js",
   "scripts": {
-    "test": "grunt test:node",
+    "test": "grunt mochaTest:main",
     "testem": "node_modules/testem/testem.js",
-    "ci": "grunt build:web; node_modules/testem/testem.js ci -l phantomjs > log/ci.tap"
+    "ci": "node_modules/testem/testem.js ci -l phantomjs > log/ci.tap"
   }
 }
