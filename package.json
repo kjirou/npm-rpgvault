@@ -1,0 +1,31 @@
+{
+  "name": "rpgvalut",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjirou/npm-rpgvalut"
+  },
+  "private": true,
+  "description": "Generate equipment data including random properties",
+  "version": "0.0.0",
+  "author": "kjirou",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-mocha-test": "*",
+    "grunt-notify": "*",
+    "grunt-testem": "*",
+    "grunt-text-replace": "*",
+    "mocha": "*",
+    "expect.js": "*",
+    "sinon": "*",
+    "testem": "*"
+  },
+  "scripts": {
+    "test": "grunt test:node",
+    "testem": "node_modules/testem/testem.js",
+    "ci": "grunt build:web; node_modules/testem/testem.js ci -l phantomjs > log/ci.tap"
+  }
+}
